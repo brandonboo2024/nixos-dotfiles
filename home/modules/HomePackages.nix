@@ -19,5 +19,10 @@
     unzip
     # moosic
     spotify
+    #note taking
+    obsidian
+    #cli utils
+    bat
   ];
+
 }

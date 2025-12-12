@@ -24,8 +24,7 @@
     kdePackages.qtsvg
     kdePackages.dolphin
     # social media
-    Telegram
+    telegram-desktop
     whatsapp-electron
-    obsidian
   ];
 }

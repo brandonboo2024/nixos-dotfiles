@@ -54,7 +54,7 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
-	  autoUpgradeFlakeRef = "/home/boo/nixos-dotfiles#Daedalus"; # this is for maintenance.nix
+	  autoUpgradeFlakeRef = "/etc/nixos-dotfiles#Daedalus"; # this is for maintenance.nix
 	};
 	modules = [
 	  ./hosts/thinkpad/default.nix

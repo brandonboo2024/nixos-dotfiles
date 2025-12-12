@@ -19,18 +19,14 @@ in
     ./modules/nvim.nix
     ./modules/swayidle.nix
     ./modules/firefox.nix
+    ./modules/bash.nix
+    ./modules/obsidian.nix
   ];
   programs.git = {
     enable = true;
     settings = {
       user.name = "brandonboo2024";
       user.email = "brandonboo2024@computing.smu.edu.sg";
-    };
-  };
-  programs.bash={
-    enable = true;
-    shellAliases = {
-      btw = "echo what am i doing";
     };
   };
   # special symlink for nvim to keep stylix config as it would clash with init.lua
