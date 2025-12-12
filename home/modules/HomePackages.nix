@@ -17,8 +17,7 @@
     #yazi utils
     p7zip
     unzip
-    #spotify
-    spotifyd
-    spotify-tui
+    # moosic
+    spotify
   ];
 }
