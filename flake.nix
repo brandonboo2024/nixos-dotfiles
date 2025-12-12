@@ -27,10 +27,13 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # sops-nix for secret management
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = inputs@{
-    self, nixpkgs, home-manager, nixpkgs-stable, mango, dankMaterialShell, dgop, stylix,...
+    self, nixpkgs, home-manager, nixpkgs-stable, mango, dankMaterialShell, dgop, stylix,
+    sops-nix,...
   }:
   let
     system = "x86_64-linux";
@@ -62,6 +65,7 @@
 	    programs.mango.enable = true;
 	  }
 	  stylix.nixosModules.stylix
+      sops-nix.nixosModules.sops
 	  {
 	    home-manager = {
 	      useGlobalPkgs=true;

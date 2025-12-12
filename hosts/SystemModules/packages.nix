@@ -23,5 +23,9 @@
     # file management
     kdePackages.qtsvg
     kdePackages.dolphin
+    # social media
+    Telegram
+    whatsapp-electron
+    obsidian
   ];
 }

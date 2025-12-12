@@ -19,6 +19,7 @@ in
     ./modules/nvim.nix
     ./modules/swayidle.nix
     ./modules/firefox.nix
+    ./modules/spotify.nix
   ];
   programs.git = {
     enable = true;
