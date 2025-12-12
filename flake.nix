@@ -50,11 +50,11 @@
   in{
     nixosConfigurations = {
       # thinkpad config
-      "brandon-thinkpad" = nixpkgs.lib.nixosSystem{
+      "Daedalus" = nixpkgs.lib.nixosSystem{
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
-	  autoUpgradeFlakeRef = "/home/boo/nixos-dotfiles#brandon-thinkpad"; # this is for maintenance.nix
+	  autoUpgradeFlakeRef = "/home/boo/nixos-dotfiles#Daedalus"; # this is for maintenance.nix
 	};
 	modules = [
 	  ./hosts/thinkpad/default.nix
