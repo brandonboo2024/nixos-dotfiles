@@ -20,7 +20,7 @@ in
     ./modules/swayidle.nix
     ./modules/firefox.nix
     ./modules/bash.nix
-    ./modules/obsidian.nix
+    # ./modules/obsidian.nix
   ];
   programs.git = {
     enable = true;
