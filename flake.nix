@@ -71,7 +71,7 @@
 	      useGlobalPkgs=true;
 	      useUserPackages=true;
 	      backupFileExtension = "backup";
-	      users.boo = {
+	      users.Daedalus = {
 	        imports = [
 	          ./home/boo/thinkpad.nix
 		  mango.hmModules.mango
