@@ -58,7 +58,5 @@ in
   # symlinking configs not done by nix language
   
 
-  home.username="boo";
-  home.homeDirectory = "/home/boo";
   home.stateVersion = "25.11";
 }

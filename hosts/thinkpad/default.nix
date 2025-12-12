@@ -10,7 +10,7 @@
       ../base.nix
       ./hardware-configuration.nix
     ];
-  networking.hostName = "brandon_thinkpad"; # Define your hostname.
+  networking.hostName = "Daedalus"; # Define your hostname.
   # specific packages/ settings to be changed here
 }
 

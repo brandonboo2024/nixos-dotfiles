@@ -17,6 +17,8 @@ in
     recursive = true;
   }) configs;
 
+  home.username="Daedalus";
+  home.homeDirectory = "/home/Daedalus";
   # home.username="boo";
   # home.homeDirectory = "/home/boo";
   # home.stateVersion = "25.11";
