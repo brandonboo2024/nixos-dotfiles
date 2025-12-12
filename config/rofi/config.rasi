@@ -54,7 +54,7 @@ inputbar {
     padding:                     0em;
     children:                    [ "entry" ];
     background-color:            @background;
-    background-image:            url("~/nixos-dotfiles/walls/official.png", height);
+    background-image:            url("~/nixos-dotfiles/walls/ghibli.jpeg", height);
     border-radius:               0.1em;
 }
 entry {

@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../walls/lake.jpg;
+    image = ../../walls/ghibli.jpeg;
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {
