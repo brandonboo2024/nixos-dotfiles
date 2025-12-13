@@ -11,6 +11,7 @@
       ./SystemModules/packages.nix
       #include stylix options
       ./SystemModules/stylix.nix
+      ./SystemModules/dankgreeter.nix
     ];
 
   #Boot loader settings
@@ -28,12 +29,12 @@
   time.timeZone = "Asia/Singapore";
 
   # displayManager settings: ly
-  services.displayManager = {
-    ly.enable = true;
-    ly.settings = {
-      bigclock = "en";
-    };
-  };
+  # services.displayManager = {
+  #   ly.enable = true;
+  #   ly.settings = {
+  #     bigclock = "en";
+  #   };
+  # };
 
   # setting wayland display for swayidle to recognise
   environment = {
