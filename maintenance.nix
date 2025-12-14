@@ -6,11 +6,11 @@
   system.autoUpgrade = {
     enable = true;
     dates = "02:30";
-    flake = autoUpgradeFlakeRef;
+    flake = "/home/boo/nixos-dotfiles/flake.nix";
     flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L"
+        "--recreate-lock-file"
+        "--commit-lock-file"
+        "-L"
     ];
     randomizedDelaySec = "45min";
   };
