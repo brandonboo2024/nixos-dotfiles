@@ -7,6 +7,7 @@ let
     rofi = "rofi";
     mango = "mango";
     nvim = "nvim";  #uncomment after adding your own nvim config
+    fastfetch = "fastfetch";
   };
 in
 {

@@ -66,6 +66,7 @@
 	  }
 	  stylix.nixosModules.stylix
       sops-nix.nixosModules.sops
+      dankMaterialShell.nixosModules.greeter
 	  {
 	    home-manager = {
 	      useGlobalPkgs=true;
