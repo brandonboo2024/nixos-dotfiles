@@ -6,7 +6,7 @@
   system.autoUpgrade = {
     enable = true;
     dates = "02:30";
-    flake = "/home/boo/nixos-dotfiles/flake.nix";
+    flake = "~/nixos-dotfiles/flake.nix";
     flags = [
         "--recreate-lock-file"
         "--commit-lock-file"
