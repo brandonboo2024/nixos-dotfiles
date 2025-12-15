@@ -95,6 +95,50 @@
 	];
       };
 	# add more devices downhere
+      "Prometheus" = nixpkgs.lib.nixosSystem{
+        inherit system;
+	specialArgs = {
+	  inherit pkgsStable;
+	  autoUpgradeFlakeRef = "/etc/nixos-dotfiles#Prometheus"; # this is for maintenance.nix
+	};
+	modules = [
+	  ./hosts/yoga/default.nix #change this
+	  # enable home manager module
+	  home-manager.nixosModules.home-manager
+	  #enable NixOS module for mangoWC, it provides a HM and NixOS one hence the repeat
+	  mango.nixosModules.mango{
+	    programs.mango.enable = true;
+	  }
+	  stylix.nixosModules.stylix
+      sops-nix.nixosModules.sops
+      dankMaterialShell.nixosModules.greeter
+	  {
+	    home-manager = {
+	      useGlobalPkgs=true;
+	      useUserPackages=true;
+	      backupFileExtension = "backup";
+	      users.Prometheus = {
+	        imports = [
+	          ./home/boo/yoga.nix
+		  mango.hmModules.mango
+	  	  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+	        ];
+	      };
+	      extraSpecialArgs = {
+		pkgs = import nixpkgs{
+		  system = "x86_64-linux";
+		  config.allowUnfree = true;
+		};
+	      };
+	      sharedModules = [
+	        {
+		}
+	      ];
+	    };
+	  }
+	  ./maintenance.nix
+	];
+      };
     };
   };
 }
