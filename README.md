@@ -1,5 +1,5 @@
 # nixos-dotfiles
-Attempt at a minimal, modular configuration in NixOS without too complexities
+Attempt at a minimal, modular configuration in NixOS without too much complexities
 <br>Specs:
 <br>Wayland Compositor: [MangoWC](https://mangowc.vercel.app/)
 <br>Desktop Shell: [Dank Material Shell](https://danklinux.com/)
