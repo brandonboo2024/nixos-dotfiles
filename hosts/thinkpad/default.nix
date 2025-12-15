@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ../base.nix
       ./hardware-configuration.nix
+      ./stylix.nix
     ];
   networking.hostName = "Daedalus"; # Define your hostname.
   # specific packages/ settings to be changed here

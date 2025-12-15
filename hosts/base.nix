@@ -10,7 +10,6 @@
       #include common baselevel packages
       ./SystemModules/packages.nix
       #include stylix options
-      ./SystemModules/stylix.nix
       ./SystemModules/dankgreeter.nix
     ];
 

@@ -9,8 +9,12 @@
     [ # Include the results of the hardware scan.
       ../base.nix
       ./hardware-configuration.nix
+      ./stylix.nix
     ];
   networking.hostName = "Prometheus"; # Define your hostname.
   # specific packages/ settings to be changed here
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 }
 
