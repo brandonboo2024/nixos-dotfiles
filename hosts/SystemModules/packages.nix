@@ -9,6 +9,7 @@
     bluez
     bluez-tools
     pipewire
+    brightnessctl
     pulseaudio
     wireplumber
     xwayland

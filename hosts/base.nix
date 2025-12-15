@@ -29,14 +29,6 @@
   # Set your time zone.
   time.timeZone = "Asia/Singapore";
 
-  # displayManager settings: ly
-  # services.displayManager = {
-  #   ly.enable = true;
-  #   ly.settings = {
-  #     bigclock = "en";
-  #   };
-  # };
-
   # setting wayland display for swayidle to recognise
   environment = {
     # setting session variables
@@ -47,14 +39,6 @@
       EDITOR = "nvim";
     };
   };
-
-  # qtile settings, to be deleted soon in favour of mangoWM
-  # services.xserver = {
-  #   enable = true;
-  #   autoRepeatDelay = 150;
-  #   autoRepeatInterval = 35;
-  #   windowManager.qtile.enable = true;
-  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -75,6 +59,13 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.Daedalus = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      tree
+    ];
+  };
+  users.users.Prometheus = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [

@@ -1,11 +1,12 @@
 # nixos-dotfiles
-Attempt at a minimal, modular configuration in NixOS without too complexities
+Attempt at a minimal, modular configuration in NixOS without too much complexities
 <br>Specs:
 <br>Wayland Compositor: [MangoWC](https://mangowc.vercel.app/)
 <br>Desktop Shell: [Dank Material Shell](https://danklinux.com/)
 <br>Text Editor: [Neovim](https://neovim.io/)
 <br>Terminal: kitty
 <br>File Manager: dolphin
+<br> App Launcher: Rofi
 <br>Theming via [Stylix](https://github.com/nix-community/stylix)
 ## Neovim
 - Neovim config files are symlinked to the `lua/` and `plugin/` directory to prevent `stylix` from destroying the `init.lua`, meaning that it can be used for any OS as well.
