@@ -10,12 +10,30 @@
       ../base.nix
       ./hardware-configuration.nix
       ./stylix.nix
+      ./sound.nix
     ];
   networking.hostName = "Prometheus"; # Define your hostname.
   # specific packages/ settings to be changed here
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
+
+  # for nvidia driver
   hardware.enableAllFirmware = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.prime = {
+    # enables you to run 'nvidia-offload <program>' to offload a program to your dGPU
+    offload.enableOffloadCmd = true;
+    offload.enable = true;
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+    
 }
 

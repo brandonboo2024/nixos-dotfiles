@@ -11,22 +11,22 @@
 	  name = "IosevkaTerm Nerd Font";
 	};
 	sansSerif = {
-	  package = pkgs.inter;
-	  name = "Inter";
+	  package = pkgs.iosevka;
+	  name = "Iosevka";
 	};
 	serif = {
-	  package = pkgs.libertine;
-	  name = "Linux Libertine";
+	  package = pkgs.Iosevka;
+	  name = "Iosevka";
 	};
 	emoji = {
 	  package = pkgs.noto-fonts-color-emoji;
 	  name = "Noto Color Emoji";
 	};
 	sizes = {
-	applications = 12;
-	terminal = 14;
-	desktop = 10;
-	popups = 10;
+	applications = 15;
+	terminal = 15;
+	desktop = 13;
+	popups = 13;
 	};
     };
     opacity = {
@@ -39,7 +39,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
-      size = 24;
+      size = 30;
     };
   };
 }
