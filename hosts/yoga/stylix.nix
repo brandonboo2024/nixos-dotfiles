@@ -15,8 +15,8 @@
 	  name = "Merriweather";
 	};
 	serif = {
-	  package = pkgs.merriweather;
-	  name = "Merriweather";
+	  package = pkgs.libertine;
+	  name = "Linux Libertine";
 	};
 	emoji = {
 	  package = pkgs.noto-fonts-color-emoji;
