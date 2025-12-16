@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../walls/ghibli.jpeg;
+    image = ../../walls/street.png;
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {
@@ -11,8 +11,8 @@
 	  name = "IosevkaTerm Nerd Font";
 	};
 	sansSerif = {
-	  package = pkgs.iosevka;
-	  name = "Iosevka";
+	  package = pkgs.merriweather;
+	  name = "Merriweather";
 	};
 	serif = {
 	  package = pkgs.iosevka;
