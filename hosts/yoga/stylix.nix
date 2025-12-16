@@ -23,10 +23,10 @@
 	  name = "Noto Color Emoji";
 	};
 	sizes = {
-	applications = 15;
+	applications = 12;
 	terminal = 15;
-	desktop = 13;
-	popups = 13;
+	desktop = 11;
+	popups = 12;
 	};
     };
     opacity = {

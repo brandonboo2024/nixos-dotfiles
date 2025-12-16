@@ -8,6 +8,7 @@
     # utilities
     bluez
     bluez-tools
+    blueman
     pipewire
     brightnessctl
     pulseaudio

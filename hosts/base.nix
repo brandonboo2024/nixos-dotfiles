@@ -18,7 +18,7 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
-  hardware.bluetooth.enable = true;
+
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
   # allow proprietary software
