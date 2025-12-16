@@ -22,11 +22,13 @@
   hardware.enableAllFirmware = true;
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+  };
+  hardware.nvidia = {
+    open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    modesetting.enable = true;
   };
   services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.prime = {
     # enables you to run 'nvidia-offload <program>' to offload a program to your dGPU
     offload.enableOffloadCmd = true;

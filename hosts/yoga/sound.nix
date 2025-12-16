@@ -20,4 +20,12 @@
      };
        wantedBy = [ "multi-user.target" "sleep.target" ];
   };
+    
+  boot.blacklistedKernelModules = [
+    "snd_hda_scodec_tas2781_i2c"
+  ];
+
+  boot.extraModprobeConfig = ''
+    blacklist snd_hda_scodec_tas2781_i2c
+  '';
 }

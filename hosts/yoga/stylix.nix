@@ -15,7 +15,7 @@
 	  name = "Iosevka";
 	};
 	serif = {
-	  package = pkgs.Iosevka;
+	  package = pkgs.iosevka;
 	  name = "Iosevka";
 	};
 	emoji = {
