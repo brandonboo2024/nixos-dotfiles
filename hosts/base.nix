@@ -9,8 +9,6 @@
     [ 
       #include common baselevel packages
       ./SystemModules/packages.nix
-      #include stylix options
-      ./SystemModules/dankgreeter.nix
     ];
 
   #Boot loader settings

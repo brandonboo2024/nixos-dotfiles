@@ -10,6 +10,7 @@
       ../base.nix
       ./hardware-configuration.nix
       ./stylix.nix
+      ./dankgreeter.nix
     ];
   networking.hostName = "Daedalus"; # Define your hostname.
   # specific packages/ settings to be changed here

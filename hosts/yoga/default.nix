@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./stylix.nix
       ./sound.nix
+      ./dankgreeter.nix
     ];
   networking.hostName = "Prometheus"; # Define your hostname.
   # specific packages/ settings to be changed here
