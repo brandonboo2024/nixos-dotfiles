@@ -25,6 +25,8 @@
     bat
     # audio equalisers
     easyeffects
+    # pywalfox
+    pywal
   ];
 
 }
