@@ -15,8 +15,8 @@
 	  name = "Merriweather";
 	};
 	serif = {
-	  package = pkgs.iosevka;
-	  name = "Iosevka";
+	  package = pkgs.merriweather;
+	  name = "Merriweather";
 	};
 	emoji = {
 	  package = pkgs.noto-fonts-color-emoji;

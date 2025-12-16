@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export TERM=linux
 # Some distros don't have i2c-dev module loaded by default, so we load it manually
