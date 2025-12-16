@@ -23,6 +23,8 @@
     obsidian
     #cli utils
     bat
+    # audio equalisers
+    easyeffects
   ];
 
 }
