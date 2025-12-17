@@ -22,6 +22,7 @@
     # java ls
     jdt-language-server 
     python313Packages.python-lsp-server
+		rust-analyzer
 
     # Needed for lazy.nvim
     nodejs
@@ -32,10 +33,15 @@
     viAlias = true;
     vimAlias = true;
 		package = inputs.nvim-nightly.packages.${pkgs.system}.default;
+		extraPackages = with pkgs; [
+			tree-sitter
+		];
 	  extraLuaConfig = lib.mkAfter ''
+			require("config")
 			require("options")
 			require("keymaps")
-			require("config")
+			require("treesitter")
+			require("harpoons")
 	   '';
   };
 }

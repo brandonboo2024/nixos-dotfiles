@@ -35,20 +35,22 @@
 
   outputs = inputs@{
     self, nixpkgs, home-manager, nixpkgs-stable, mango, dankMaterialShell, dgop, stylix,
-    sops-nix,...
+    ...
   }:
   let
     system = "x86_64-linux";
-    
     pkgs = import nixpkgs{
-      inherit system;
+      inherit system overlays;
       config.allowUnfree = true;
     };
 
     pkgsStable = import nixpkgs-stable{
-      inherit system;
+      inherit system overlays;
       config.allowUnfree = true;
     };
+		overlays = [
+			inputs.nvim-nightly.overlays.default
+		];
   in{
     nixosConfigurations = {
       # thinkpad config
@@ -56,7 +58,6 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
-		inherit pkgs;
 		inherit inputs;
 	};
 	modules = [
@@ -68,18 +69,21 @@
 	    programs.mango.enable = true;
 	  }
 	  stylix.nixosModules.stylix
-      sops-nix.nixosModules.sops
       dankMaterialShell.nixosModules.greeter
 	  {
 	    home-manager = {
 	      useGlobalPkgs=true;
 	      useUserPackages=true;
 	      backupFileExtension = "backup";
+				extraSpecialArgs = {
+					inherit inputs;
+					inherit pkgsStable; # optional, only if you use it in HM modules
+				};
 	      users.Daedalus = {
 	        imports = [
 	          ./home/boo/thinkpad.nix
-		  mango.hmModules.mango
-	  	  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+						mango.hmModules.mango
+						inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 	        ];
 	      };
 	      sharedModules = [
@@ -96,7 +100,6 @@
 	specialArgs = {
 	  inherit pkgsStable;
 		inherit inputs;
-		inherit pkgs;
 	};
 	modules = [
 	  ./hosts/yoga/default.nix #change this
@@ -107,13 +110,16 @@
 	    programs.mango.enable = true;
 	  }
 	  stylix.nixosModules.stylix
-		sops-nix.nixosModules.sops
 		dankMaterialShell.nixosModules.greeter
 	  {
 	    home-manager = {
 	      useGlobalPkgs=true;
 	      useUserPackages=true;
 	      backupFileExtension = "backup";
+				extraSpecialArgs = {
+					inherit inputs;
+					inherit pkgsStable; # optional, only if you use it in HM modules
+				};
 	      users.Prometheus = {
 	        imports = [
 	          ./home/boo/yoga.nix
@@ -121,17 +127,15 @@
 						inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 	        ];
 	      };
-			};
 	      sharedModules = [
 	        {
 		}
 	      ];
 	    };
-	  }
+		}
 	];
       };
 # add more devices here
     };
-  };
-
+	};
 }
