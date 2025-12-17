@@ -27,6 +27,7 @@
     easyeffects
     # pywalfox
     pywal
+    pywalfox-native
   ];
 
 }

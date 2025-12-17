@@ -39,9 +39,6 @@
     imagemagick 
     ];
 	   extraLuaConfig = lib.mkAfter ''
-	require("core.options")
-	require("core.keymaps")
-	require("core.lazy-setup")
 	   '';
   };
 }
