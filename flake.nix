@@ -27,8 +27,10 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # sops-nix for secret management
-    sops-nix.url = "github:Mic92/sops-nix";
+		nvim-nightly = {
+			url = "github:nix-community/neovim-nightly-overlay";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
   outputs = inputs@{
@@ -54,7 +56,6 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
-	  autoUpgradeFlakeRef = "/etc/nixos-dotfiles#Daedalus"; # this is for maintenance.nix
 	};
 	modules = [
 	  ./hosts/thinkpad/default.nix
@@ -99,7 +100,6 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
-	  autoUpgradeFlakeRef = "/etc/nixos-dotfiles#Prometheus"; # this is for maintenance.nix
 	};
 	modules = [
 	  ./hosts/yoga/default.nix #change this

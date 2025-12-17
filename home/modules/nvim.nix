@@ -1,4 +1,4 @@
-{lib,pkgs,input,config,...}:
+{lib,pkgs,inputs,config,...}:
 
 {
   home.packages = with pkgs; [
@@ -31,14 +31,11 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
-    extraLuaPackages = ps: [
-      ps.magick
-    ];
-    #for language servers, add them below
-    extraPackages = with pkgs;[ 
-    imagemagick 
-    ];
-	   extraLuaConfig = lib.mkAfter ''
+		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+	  extraLuaConfig = lib.mkAfter ''
+			require("options")
+			require("keymaps")
+			require("config")
 	   '';
   };
 }
