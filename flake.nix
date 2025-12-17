@@ -56,6 +56,8 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
+		inherit pkgs;
+		inherit inputs;
 	};
 	modules = [
 	  ./hosts/thinkpad/default.nix
@@ -80,19 +82,12 @@
 	  	  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 	        ];
 	      };
-	      extraSpecialArgs = {
-		pkgs = import nixpkgs{
-		  system = "x86_64-linux";
-		  config.allowUnfree = true;
-		};
-	      };
 	      sharedModules = [
 	        {
 		}
 	      ];
 	    };
 	  }
-	  ./maintenance.nix
 	];
       };
 	# add more devices downhere
@@ -100,6 +95,8 @@
         inherit system;
 	specialArgs = {
 	  inherit pkgsStable;
+		inherit inputs;
+		inherit pkgs;
 	};
 	modules = [
 	  ./hosts/yoga/default.nix #change this
@@ -110,8 +107,8 @@
 	    programs.mango.enable = true;
 	  }
 	  stylix.nixosModules.stylix
-      sops-nix.nixosModules.sops
-      dankMaterialShell.nixosModules.greeter
+		sops-nix.nixosModules.sops
+		dankMaterialShell.nixosModules.greeter
 	  {
 	    home-manager = {
 	      useGlobalPkgs=true;
@@ -120,25 +117,21 @@
 	      users.Prometheus = {
 	        imports = [
 	          ./home/boo/yoga.nix
-		  mango.hmModules.mango
-	  	  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+						mango.hmModules.mango
+						inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 	        ];
 	      };
-	      extraSpecialArgs = {
-		pkgs = import nixpkgs{
-		  system = "x86_64-linux";
-		  config.allowUnfree = true;
-		};
-	      };
+			};
 	      sharedModules = [
 	        {
 		}
 	      ];
 	    };
 	  }
-	  ./maintenance.nix
 	];
       };
+# add more devices here
     };
   };
+
 }

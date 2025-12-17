@@ -31,7 +31,7 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
-		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+		package = inputs.nvim-nightly.packages.${pkgs.system}.default;
 	  extraLuaConfig = lib.mkAfter ''
 			require("options")
 			require("keymaps")
