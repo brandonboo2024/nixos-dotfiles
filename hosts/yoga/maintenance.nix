@@ -6,7 +6,7 @@
   system.autoUpgrade = {
     enable = true;
     dates = "02:30";
-    flake = "~/nixos-dotfiles/flake.nix";
+    flake = "/home/Prometheus/nixos-dotfiles#Prometheus";
     flags = [
         "--recreate-lock-file"
         "--commit-lock-file"

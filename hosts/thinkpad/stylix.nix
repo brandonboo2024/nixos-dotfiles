@@ -11,8 +11,8 @@
 	  name = "IosevkaTerm Nerd Font";
 	};
 	sansSerif = {
-	  package = pkgs.inter;
-	  name = "Inter";
+	  package = pkgs.merriweather;
+	  name = "Merriweather";
 	};
 	serif = {
 	  package = pkgs.libertine;
