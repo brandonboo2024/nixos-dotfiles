@@ -14,6 +14,7 @@
     cliphist
     #terminal
     kitty
+		tmux
     #yazi utils
     p7zip
     unzip

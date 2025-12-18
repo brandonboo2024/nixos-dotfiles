@@ -8,6 +8,7 @@ let
     mango = "mango";
     nvim = "nvim";  #uncomment after adding your own nvim config
     fastfetch = "fastfetch";
+		tmux = "tmux";
   };
 in
 {

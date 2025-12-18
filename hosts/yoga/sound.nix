@@ -1,11 +1,18 @@
 { config, pkgs, ... }:
 
 {
-   environment.systemPackages = with pkgs; [
-     util-linux
-     kmod
-     i2c-tools
-   ];
+	environment.systemPackages = with pkgs; [
+		util-linux
+			kmod
+			i2c-tools
+			bash
+			coreutils
+			gnugrep
+			gnused
+			gawk
+			i2c-tools
+			kmod
+	];
 
    boot.kernelModules = [ "i2c-dev" ];
 

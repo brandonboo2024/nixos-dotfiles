@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 export TERM=linux
 # Some distros don't have i2c-dev module loaded by default, so we load it manually
@@ -21,7 +21,13 @@ find_i2c_bus() {
         echo "Error: Less than $bus_index DesignWare I2C adapters found." >&2
         return 1
     fi
-    local bus_number=$(i2cdetect -l | grep "$adapter_description" | awk '{print $1}' | sed 's/i2c-//' | sed -n "${bus_index}p")
+    # local bus_number=$(i2cdetect -l | grep "$adapter_description" | awk '{print $1}' | sed 's/i2c-//' | sed -n "${bus_index}p")
+		local bus_number=$(
+			i2cdetect -l |
+				grep "$adapter_description" |
+				sed -n "${bus_index}p" |
+				sed -E 's/^i2c-([0-9]+).*/\1/'
+		)
     echo "$bus_number"
 }
 i2c_bus=$(find_i2c_bus)
