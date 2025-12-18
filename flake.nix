@@ -83,7 +83,7 @@
 	        imports = [
 	          ./home/boo/thinkpad.nix
 						mango.hmModules.mango
-						inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+						inputs.dankMaterialShell.homeModules.dank-material-shell
 	        ];
 	      };
 	      sharedModules = [
@@ -124,7 +124,7 @@
 	        imports = [
 	          ./home/boo/yoga.nix
 						mango.hmModules.mango
-						inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+						inputs.dankMaterialShell.homeModules.dank-material-shell
 	        ];
 	      };
 	      sharedModules = [

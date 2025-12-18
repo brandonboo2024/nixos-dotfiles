@@ -9,12 +9,12 @@
     [ 
       #include common baselevel packages
       ./SystemModules/packages.nix
+			./SystemModules/bootloader.nix
+			./SystemModules/bluetooth.nix
     ];
 
   #Boot loader settings
-  boot.loader.systemd-boot.configurationLimit = 10;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.configurationLimit = 10;
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -41,7 +41,7 @@
   services.printing.enable = true;
 
   # Enable sound.
-  hardware.pulseaudio.enable=false;
+  services.pulseaudio.enable=false;
   services.pipewire = {
     # enable support and different compatabilities
     enable = true;
