@@ -13,8 +13,6 @@
 			./SystemModules/bluetooth.nix
     ];
 
-  #Boot loader settings
-  # boot.loader.systemd-boot.configurationLimit = 10;
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
