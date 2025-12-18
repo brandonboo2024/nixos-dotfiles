@@ -1,15 +1,18 @@
 { lib, ... }:
 let
-  refindDreary = ./themes/refind-dreary;
+  refindDreary = ../../refind-dreary;
   themeDir = "${refindDreary}/highres"; # or lowres/clover
 
   themeFiles = lib.filesystem.listFilesRecursive themeDir;
 
-  themeAdditionalFiles = builtins.listToAttrs (map (src: {
-    name = "EFI/refind/themes/refind-dreary/"
-      + lib.removePrefix (toString themeDir + "/") (toString src);
-    value = src;
-  }) themeFiles);
+	relPath = src: lib.removePrefix (toString themeDir + "/") (toString src);
+  themeAdditionalFiles =
+    builtins.listToAttrs (map (src: {
+      name = builtins.unsafeDiscardStringContext (
+        "themes/refind-dreary/" + relPath src
+      );
+      value = src;  # keep as a path (store path is OK here)
+    }) themeFiles);
 in
 {
 	boot.loader = {
