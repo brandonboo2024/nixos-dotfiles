@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../walls/street.png;
+    image = ../../walls/mountain.png;
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {

@@ -47,6 +47,7 @@ in
       extraConfig = ''
         include themes/refind-dreary/theme.conf
 				additionalFiles = themeAdditionalFiles // refindIconsAdditionalFiles;
+				'';
     };
   };
 }
