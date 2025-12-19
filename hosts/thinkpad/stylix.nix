@@ -3,6 +3,7 @@
   stylix = {
     enable = true;
     image = ../../walls/ghibli.jpeg;
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {
