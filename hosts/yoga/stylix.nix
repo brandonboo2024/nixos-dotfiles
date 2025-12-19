@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../walls/mountain.png;
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/embers.yaml";
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {
@@ -30,9 +30,9 @@
 	};
     };
     opacity = {
-      applications = 0.92;
-      terminal = 0.9;
-      desktop = 0.97;
+      applications = 1;
+      terminal = 1;
+      desktop = 1;
       popups = 0.9;
     };
     polarity = "dark";
