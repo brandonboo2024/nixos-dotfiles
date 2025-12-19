@@ -30,9 +30,9 @@
 	};
     };
     opacity = {
-      applications = 0.95;
-      terminal = 0.95;
-      desktop = 0.98;
+      applications = 1;
+      terminal = 1;
+      desktop = 1;
       popups = 0.9;
     };
     polarity = "dark";
