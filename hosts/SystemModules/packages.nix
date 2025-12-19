@@ -28,5 +28,7 @@
     # social media
     telegram-desktop
     whatsapp-electron
+		# document viewer
+		zathura
   ];
 }

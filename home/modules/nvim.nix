@@ -27,7 +27,7 @@
     # Needed for lazy.nvim
     nodejs
   ];
-
+	stylix.targets.neovim.enable = false;
   programs.neovim = lib.mkForce{
     enable = true;
     viAlias = true;

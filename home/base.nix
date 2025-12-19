@@ -9,6 +9,7 @@ let
     nvim = "nvim";  #uncomment after adding your own nvim config
     fastfetch = "fastfetch";
 		tmux = "tmux";
+		zathura = "zathura";
   };
 in
 {
