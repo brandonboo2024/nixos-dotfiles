@@ -7,8 +7,6 @@
       cat = "bat";
     };
     initExtra = ''
-        fastfetch
-
         function y() {
             local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
             yazi "$@" --cwd-file="$tmp"
