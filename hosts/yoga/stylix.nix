@@ -3,6 +3,7 @@
   stylix = {
     enable = true;
     image = ../../walls/mountain.png;
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/zenbones.yaml";
     #enable fonts provided by stylix
     autoEnable = true;
     fonts = {
