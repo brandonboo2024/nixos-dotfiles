@@ -2,7 +2,7 @@
 {
     programs.dankMaterialShell.greeter = {
         enable = true;
-        compositor.name = "sway";
+        compositor.name = "hyprland";
         configHome = "/home/Daedalus";
         logs = {
             save = true;

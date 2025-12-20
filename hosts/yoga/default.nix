@@ -18,7 +18,6 @@
   # specific packages/ settings to be changed here
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    QT_SCALE_FACTOR_ROUNDING_POLICY = "PassThrough";
   };
 
   # for nvidia driver
