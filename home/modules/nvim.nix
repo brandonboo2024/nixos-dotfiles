@@ -7,9 +7,13 @@
     fd
     fzf
 
+		# c++
+		bear
+		glibc
+		gnumake
     # Language Servers
     nixpkgs-fmt # nix formatter
-    gcc # compiler
+    gcc # c compiler
     python3 #python
     lua-language-server
     clang-tools
