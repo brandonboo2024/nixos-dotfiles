@@ -16,7 +16,9 @@
     gcc # c compiler
     python3 #python
     lua-language-server
-    clang-tools
+		llvmPackages_latest.lldb
+		llvmPackages_latest.libllvm
+		llvmPackages_latest.libcxx
     #nix lsp
     nil 
     typescript-language-server

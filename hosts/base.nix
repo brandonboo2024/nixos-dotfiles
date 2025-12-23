@@ -26,6 +26,9 @@
 
   # setting wayland display for swayidle to recognise
   environment = {
+		# setting clangd source
+		etc."clangd/glibc/include".source =
+		"${pkgs.stdenv.cc.libc.dev}/include";
     # setting session variables
     sessionVariables = {
     };

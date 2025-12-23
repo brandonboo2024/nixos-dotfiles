@@ -30,5 +30,13 @@
     whatsapp-electron
 		# document viewer
 		zathura
+		# clang
+		clang-tools
+		glibc
+		clang
+		llvmPackages_latest.lldb
+		llvmPackages_latest.libllvm
+		llvmPackages_latest.libcxx
+		llvmPackages_latest.clang
   ];
 }
