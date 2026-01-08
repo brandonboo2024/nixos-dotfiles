@@ -8,9 +8,6 @@
     fzf
 
 		# c++
-		bear
-		glibc
-		gnumake
     # Language Servers
     nixpkgs-fmt # nix formatter
     gcc # c compiler

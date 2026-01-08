@@ -38,5 +38,10 @@
 		llvmPackages_latest.libllvm
 		llvmPackages_latest.libcxx
 		llvmPackages_latest.clang
+		bear
+		glibc
+		gnumake
+		cmake
+		gdb
   ];
 }

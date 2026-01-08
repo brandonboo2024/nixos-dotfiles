@@ -14,14 +14,9 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dgop = {
-      url = "github:/AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
     stylix = {
       url = "github:nix-community/stylix";
@@ -34,7 +29,7 @@
   };
 
   outputs = inputs@{
-    self, nixpkgs, home-manager, nixpkgs-stable, mango, dankMaterialShell, dgop, stylix,
+    self, nixpkgs, home-manager, nixpkgs-stable, mango, dankMaterialShell,  stylix,
     ...
   }:
   let
