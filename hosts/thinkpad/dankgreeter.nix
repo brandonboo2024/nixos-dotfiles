@@ -2,7 +2,7 @@
 {
     programs.dankMaterialShell.greeter = {
         enable = true;
-        compositor.name = "hyprland";
+        compositor.name = "niri";
         configHome = "/home/Daedalus";
         logs = {
             save = true;
